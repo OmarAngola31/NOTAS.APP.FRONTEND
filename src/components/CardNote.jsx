@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
 // id
-const CardNote = ({ title, description, date, id, onDelete }) => {
+const CardNote = ({ titulo, descripcion, fecha, id, onDelete }) => {
   const navigate = useNavigate();
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -45,12 +45,12 @@ const CardNote = ({ title, description, date, id, onDelete }) => {
     <>
       <div className="card bg-base-300 w-full">
         <div className="card-body">
-          <h2 className="card-title text-accent font-bold lg:text-2xl">
-            {title}
+          <h2 className="card-titulo text-accent font-bold lg:text-2xl">
+            {titulo}
           </h2>
-          <p className="text-amber-50">{description}</p>
+          <p className="text-amber-50">{descripcion}</p>
           <div className="flex justify-between items-center mt-6">
-            <time dateTime={date}>{date}</time>
+            <time dateTime={fecha}>{fecha}</time>
             <div className="flex gap-4">
               <SquarePen
                 className="text-white cursor-pointer"
@@ -67,7 +67,7 @@ const CardNote = ({ title, description, date, id, onDelete }) => {
 
       {showConfirmModal && (
         <DeleteConfirmationModal
-          title={title}
+          titulo={titulo}
           deleteNote={deleteNote}
           setShowConfirmModal={setShowConfirmModal}
         />
