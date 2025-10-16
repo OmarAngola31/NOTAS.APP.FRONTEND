@@ -4,7 +4,7 @@ const NotaForm = ({onSubmit, initialDate}) => {
   const [nota, setNotas] = useState(initialDate);
 
   useEffect( () => {
-    setNotas[initialDate]
+    setNotas(initialDate)
   },[initialDate]);
 
   const handleChange = (e) => {
