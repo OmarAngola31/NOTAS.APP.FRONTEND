@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/homePage";
-import EditNotePage from "./pages/editNotePage";
-import CreateNotePage from "./pages/createNotePage";
+import HomePage from "./pages/HomePage";
+import EditNotePage from "./pages/EditNotePage";
+import CreateNotePage from "./pages/CreateNotePage";
 import { ToastContainer} from "react-toastify"
 
 function App() {
