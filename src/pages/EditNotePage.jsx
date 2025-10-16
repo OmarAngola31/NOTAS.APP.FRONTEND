@@ -15,7 +15,7 @@ const EditNotePage = () => {
   });
 
   useEffect(() => {
-    axios.get(`${apiURL}/api/notes/${id}`).then((res) => {
+    axios.get(`${apiURL}/api/notas/${id}`).then((res) => {
       setInitialData({
         titulo: res.data.titulo,
         descripcion: res.data.descripcion,
@@ -23,8 +23,8 @@ const EditNotePage = () => {
     });
   }, [id]);
 
-  const handleUpdate = async (note) => {
-    await axios.put(`${apiURL}/api/notes/${id}`, note).then((res) => {
+  const handleUpdate = async (nota) => {
+    await axios.put(`${apiURL}/api/notas/${id}`, nota).then((res) => {
       if (res.status === 200) {
         toast.success("¡Nota actualizada con éxito!", {
           position: "bottom-right",
