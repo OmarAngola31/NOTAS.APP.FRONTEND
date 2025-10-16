@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
-import NoteForm from "../components/NoteForm";
+import NotaForm from "../components/NotaForm";
 const apiURL = import.meta.env.VITE_API_URL;
 
 const EditNotePage = () => {
@@ -45,7 +45,7 @@ const EditNotePage = () => {
   return (
     <div>
       <h1 className="text-5xl font-bold text-center mb-8">Editar Nota</h1>
-      <NoteForm initialData={initialData} onSubmit={handleUpdate} />
+      <NotaForm initialData={initialData} onSubmit={handleUpdate} />
     </div>
   );
 };
