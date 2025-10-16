@@ -13,7 +13,7 @@ const CardNote = ({ title, description, date, id, onDelete }) => {
     try {
       // Eliminando la nota de la DB
       await axios
-        .delete(`${import.meta.env.VITE_API_URL}/api/notes/${id}`)
+        .delete(`${import.meta.env.VITE_API_URL}/api/notas/${id}`)
         .then((res) => {
           if (res.status !== 200) {
             throw new Error("Error al eliminar la nota");
@@ -54,7 +54,7 @@ const CardNote = ({ title, description, date, id, onDelete }) => {
             <div className="flex gap-4">
               <SquarePen
                 className="text-white cursor-pointer"
-                onClick={() => navigate(`/editNote/${id}`)}
+                onClick={() => navigate(`/editNotePage/${id}`)}
               ></SquarePen>
               <Trash
                 onClick={() => setShowConfirmModal(true)}
